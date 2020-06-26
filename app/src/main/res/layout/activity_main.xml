@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#81ABCF"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="208dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="63dp"
+        android:fontFamily="@font/alfa_slab_one"
+        android:text="@string/geography_quiz"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="120dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="65dp"
+        android:onClick="startQuiz"
+        android:text="@string/start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <Button
+        android:id="@+id/viewMapButton"
+        android:layout_width="120dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="30dp"
+        android:onClick="viewMap"
+        android:text="@string/map"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startButton" />
+
+    <ImageView
+        android:id="@+id/map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/map"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/map" />
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="600dp"
+        android:onClick="backButton"
+        android:text="@string/back"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/map" />
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="147dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/carter_one"
+        android:text="@string/score"
+        android:textAlignment="viewStart"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="344dp"
+        android:layout_height="112dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/abril_fatface"
+        android:text="@string/initialText"
+        android:textAlignment="textStart"
+        android:textColor="#494141"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/map" />
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="344dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="15dp"
+        android:visibility="invisible"
+        app:columnCount="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/question"
+        app:rowCount="2">
+
+        <Button
+            android:id="@+id/optionOne"
+            android:layout_width="172dp"
+            android:layout_height="80dp"
+            android:onClick="optionClicked"
+            android:tag="1"
+            android:text="@string/optionOne"
+            android:textSize="14sp"
+            app:layout_column="0"
+            app:layout_row="0" />
+
+        <Button
+            android:id="@+id/optionFour"
+            android:layout_width="172dp"
+            android:layout_height="80dp"
+            android:onClick="optionClicked"
+            android:tag="4"
+            android:text="@string/optionFour"
+            app:layout_column="1"
+            app:layout_row="1" />
+
+        <Button
+            android:id="@+id/optionTwo"
+            android:layout_width="172dp"
+            android:layout_height="80dp"
+            android:onClick="optionClicked"
+            android:tag="2"
+            android:text="@string/optionTwo"
+            app:layout_column="1"
+            app:layout_row="0" />
+
+        <Button
+            android:id="@+id/optionThree"
+            android:layout_width="172dp"
+            android:layout_height="80dp"
+            android:onClick="optionClicked"
+            android:tag="3"
+            android:text="@string/optionThree"
+            app:layout_column="0"
+            app:layout_row="1" />
+    </androidx.gridlayout.widget.GridLayout>
+
+    <TextView
+        android:id="@+id/infoText"
+        android:layout_width="344dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/chonburi"
+        android:text="@string/info"
+        android:textAlignment="center"
+        android:textColor="#352C2C"
+        android:textSize="17sp"
+        android:textStyle="italic"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout" />
+
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="32dp"
+        android:onClick="nextClicked"
+        android:text="@string/next"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/infoText" />
+
+    <Button
+        android:id="@+id/mainMenuButton"
+        android:layout_width="120dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="76dp"
+        android:onClick="backToMainMenu"
+        android:text="@string/main_menu"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/infoText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

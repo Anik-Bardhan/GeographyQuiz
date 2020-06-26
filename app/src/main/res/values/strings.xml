@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Geography Quiz</string>
+    <string name="geography_quiz">Geography Quiz</string>
+    <string name="start">START QUIZ</string>
+    <string name="map">VIEW MAP</string>
+    <string name="back">BACK</string>
+    <string name="score">Score: 0/0</string>
+    <string name="initialText">Q1: What is the capital of West Bengal?</string>
+    <string name="optionOne">Siliguri</string>
+    <string name="optionTwo">Purulia</string>
+    <string name="optionThree">Kolkata</string>
+    <string name="optionFour">Durgapur</string>
+    <string name="info">Purulia, Siliguri, Digha, Durgapur, Asansol, Darjeeling, Kharagpur and Shantiniketan are few places in West Bengal.</string>
+    <string name="next">NEXT</string>
+    <string name="main_menu">MAIN MENU</string>
+    <string name="certificate">Certificate</string>
+</resources>
