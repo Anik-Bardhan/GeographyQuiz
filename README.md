@@ -1,6 +1,5 @@
 # GeographyQuiz
-This is my first project on Android, and also my first GitHub repository.
-The quiz is about the Indian states and their capitals.
+A basic quiz application using Java and Android Studio.
 Minimum SDK: API 24
 
 ![WhatsApp Image 2020-08-23 at 16 01 37](https://user-images.githubusercontent.com/64066495/90976473-03fe3f00-e55b-11ea-9e33-3cd6ba43af9a.jpeg)
